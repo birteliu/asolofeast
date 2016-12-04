@@ -43,13 +43,13 @@
 </head>
 
 <body>
-    <div class="page">
+    <div class="page" id="index">
         <nav class="screen">
             <ul>
-                <li><a href="" title="">首頁</a></li>
-                <li><a href="" title="">關於作者</a></li>
-                <li><a href="" title="">章節試閱</a></li>
-                <li><a href="" title="">購買資訊</a></li>
+                <li><a href="#index" title="" data-scroll>首頁</a></li>
+                <li><a href="#introduction" title="" data-scroll>作者與簡介</a></li>
+                <li><a href="#read" title="" data-scroll>章節試閱</a></li>
+                <li><a href="#buybook" title="" data-scroll>購買資訊</a></li>
             </ul>
         </nav>
         <header class="w-100">
@@ -77,8 +77,8 @@
         </header>
         <div class="content">
             <div class="author">
-                <div class="w-100">
-                    <h4>－ 關於作者 －</h4>
+                <div class="w-100" id="introduction">
+                    <h4>－ 作者與簡介 －</h4>
                 </div>
                 <div class="w-40">
                     <picture>
@@ -94,14 +94,15 @@
                     <div class="author-word">
                         <h6>作者：顧秀賢</h6>
                         <p>資深新聞人（自立報系）、成教工作者（南島社區大學）、現居台東過日子。</p>
+                        <h6>書籍介紹</h6>
                         <p>寫作，某種喻意，是門靈魂安頓的技藝。沒有臉書的塗鴉牆，大概就沒有這些自我療癒的隨筆。社群媒體無料使用，總想讓書寫稍微有料。許或眼高手低，心虛為壯行色，邀來摯友豪人、鐵志為拙著作序。兩位歹年冬有志一同幹壞事的哥兒們，願意屈尊賣面子，友誼真溫暖！</p>
                     </div>
                 </div>
             </div> <!-- author -->
             <div class="w-100 bgMockup">
-                <img src="img/mockup1.jpg" class="img-100">
+                <img src="img/bookinside.png" class="img-100">
             </div> <!-- bgMockup -->
-            <article class="w-100">
+            <article class="w-100" id="read">
                 <h4>－ 章節試閱 －</h4>
                 <div class="essay">
                 <div id="owl-demo" class="owl-carousel owl-theme">
@@ -136,7 +137,7 @@
             <div class="w-100 fixImg" style="background-image: url('img/fiximage.jpg')">
                 <h3>A Solo Feast</h3>
             </div>
-            <div class="w-100">
+            <div class="w-100" id="buybook">
                 <h4>－ 購買資訊 －</h4>
                 <div class="buy">
                     <div class="w-50">
@@ -153,16 +154,15 @@
                         定價：NT $ 320<br>
                         網路優惠價：8 折 免運費<br>
                         郵撥：06463413 黃瑞玲<br>
-                        寄售：高雄三餘書店</p>
                     </div>
                 </div> <!-- buy -->
             </div>
         </div> <!-- content -->
         <footer>
             <div class="w-100 contact">
-                <a href="https://www.facebook.com/asolofeast"><img src="img/Facebook.svg" alt="" class="img-100 hvr-pulse"></a><br>      
-                <p class="inline">電話：0912-102-406<span>｜</span></p>
-                <p class="inline">信箱：aoxkuli@gmail.com</p>
+                <!-- <a href="https://www.facebook.com/asolofeast"><img src="img/Facebook.svg" alt="" class="img-100 hvr-pulse"></a><br>   -->    
+                <p class="inline">聯絡電話：0912-102-406<span>｜</span></p>
+                <p class="inline">聯絡信箱：aoxkuli@gmail.com</p>
                 <hr>
                 <p class="small">© 2016 create by Hao Hsuan</p>
             </div>
@@ -172,10 +172,10 @@
             <div id="dl-menu" class="dl-menuwrapper mobile">
                 <button class="dl-trigger">Open Menu</button>
                 <ul class="dl-menu font-lucida-r">
-                    <li><a href="" title="">首頁</a></li>
-                    <li><a href="" title="">關於作者</a></li>
-                    <li><a href="" title="">章節試閱</a></li>
-                    <li><a href="" title="">購買資訊</a></li>
+                    <li><a href="#index" title="" data-scroll>首頁</a></li>
+                    <li><a href="#introduction" title="" data-scroll>作者與簡介</a></li>
+                    <li><a href="#read" title="" data-scroll>章節試閱</a></li>
+                    <li><a href="#buybook" title="" data-scroll>購買資訊</a></li>
                 </ul>
             </div>
             <!-- /dl-menuwrapper -->
@@ -183,6 +183,7 @@
     </div><!-- page -->
     <!-- JS -->
     <script src="js/jquery.dlmenu.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
     <script>
         $(function() {
