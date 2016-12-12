@@ -179,6 +179,12 @@ a {
             background-color: @lightC;
             border: 30px solid #fff;
             text-align: center;
+            @media (min-height: 850px) {
+                height: 50%;
+            }
+            @media (min-height: 950px) {
+                height: 45%;
+            }
             .square-content {
                 margin: 3em 10px;
                 p {
@@ -192,6 +198,9 @@ a {
                 img {
                     width: 80px;
                     margin-top: 1.5em;
+                @media (min-height: 850px) {
+                    width: 95px;
+                }
                 }
             }
         }
