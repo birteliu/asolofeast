@@ -79,8 +79,8 @@
                 <div class="w-100" id="introduction">
                     <h4>－ 書籍素描 －</h4>
                     <p class="introduction">《一個人的圍爐》談書，也談論文學界、思想界的軼聞趣事。文章短捷精鍊，涵蘊作者關照現實的閱讀經驗與生活哲思。前半部隨筆輯成「書之誌」。內容緊繞書籍、獨立書店、及點評寫作名家。以「書話」與輕閱讀的網路世代對話－聊 Ann Patchett 苦心經營力抗 Amazon 的社區書店、Roald Dahl 從事創作的小木屋；聽左翼才子 Terry Eagleton 嘆文學、Joe Queenan 論爛書；看 Yann Martel 如何為自家總理開書單、Walter Benjamin 怎麼廣播放送作革命等…。
-                    <span>後半小品「生之誌」，為五年級世代人生行路的流年感悟。有解嚴前後的濟南路報社生涯、戒嚴強控體制中的文化人圖像，以及作者對當下台灣社會現象的文化時評。</span>
-                    <span>《一個人的圍爐》作為典型隨筆主義的實踐文類，體例輕而不薄、知性渾融感性，書海泛舟，引渡愛書人共感的閱讀之趣。</span></p>
+                        <span>後半小品「生之誌」，為五年級世代人生行路的流年感悟。有解嚴前後的濟南路報社生涯、戒嚴強控體制中的文化人圖像，以及作者對當下台灣社會現象的文化時評。</span>
+                        <span>《一個人的圍爐》作為典型隨筆主義的實踐文類，體例輕而不薄、知性渾融感性，書海泛舟，引渡愛書人共感的閱讀之趣。</span></p>
                 </div>
                 <div class="w-40">
                     <picture>
@@ -97,8 +97,10 @@
                         <h6>作者：顧秀賢</h6>
                         <p>資深新聞人（自立報系）、成教工作者（南島社區大學）、現居台東過日子。</p>
                         <h6>推薦序言</h6>
-                        <p><i>吳豪人 輔仁大學法律系副教授 －</i><br>這就是老顧為了教養主義的沒落，所作的最溫柔的復仇。一個人圍爐，卻留下普羅米修斯的智慧之火。</p>
-                        <p><i>張鐵志 知名文化與政治評論人 －</i><br>在這個新的喧鬧中，秀賢這本書更顯得極其特別。本書文章都不長、看似輕巧，但每篇都意味深遠,飽含思想靈光，讀來痛快。他寫西方作家和知識界的小故事，隨意信手捻來，又能扣連台灣現實，可見作者功力之深。</p>
+                        <p><i>吳豪人 輔仁大學法律系副教授 －</i>
+                            <br>這就是老顧為了教養主義的沒落，所作的最溫柔的復仇。一個人圍爐，卻留下普羅米修斯的智慧之火。</p>
+                        <p><i>張鐵志 知名文化與政治評論人 －</i>
+                            <br>在這個新的喧鬧中，秀賢這本書更顯得極其特別。本書文章都不長、看似輕巧，但每篇都意味深遠,飽含思想靈光，讀來痛快。他寫西方作家和知識界的小故事，隨意信手捻來，又能扣連台灣現實，可見作者功力之深。</p>
                     </div>
                 </div>
             </div>
@@ -174,7 +176,7 @@
                             <!-- <source srcset="img/book.png" media="(min-width: 300px)"> -->
                             <!--[if IE 9]></video><![endif]-->
                             <!-- <img srcset="img/book.png" alt="works1" class="img-100 author-img"> -->
-                            <source srcset="img/bookphoto.jpg" media="(min-width: 1000px)">  
+                            <source srcset="img/bookphoto.jpg" media="(min-width: 1000px)">
                             <source srcset="img/bookphoto2.jpg" media="(min-width: 800px)">
                             <source srcset="img/bookphoto.jpg" media="(min-width: 300px)">
                             <img srcset="img/bookphoto.jpg" alt="works1" class="img-100 author-img">
@@ -207,10 +209,10 @@
             <div id="dl-menu" class="dl-menuwrapper mobile">
                 <button class="dl-trigger">Open Menu</button>
                 <ul class="dl-menu font-lucida-r">
-                    <li><a href="#index" title="" data-scroll>首頁</a></li>
-                    <li><a href="#introduction" title="" data-scroll>書籍素描</a></li>
-                    <li><a href="#read" title="" data-scroll>章節試閱</a></li>
-                    <li><a href="#buybook" title="" data-scroll>購買資訊</a></li>
+                    <li><a href="#index" title="" data-scroll id="1">首頁</a></li>
+                    <li><a href="#introduction" title="" data-scroll id="2">書籍素描</a></li>
+                    <li><a href="#read" title="" data-scroll id="3">章節試閱</a></li>
+                    <li><a href="#buybook" title="" data-scroll id="4">購買資訊</a></li>
                 </ul>
             </div>
             <!-- /dl-menuwrapper -->
@@ -245,6 +247,21 @@
         });
     });
     </script>
+    <script>
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+    </script>
+    <!-- Smooth Scrolling -->
     <!-- owlCarousel -->
     <script type="text/javascript">
     $(function() {
